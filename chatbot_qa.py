@@ -38,7 +38,7 @@ import weaviate
 import os
 client = weaviate.Client(
     url=WEAVIATE_URL,
-    additional_headers={"X-OpenAI-Api-Key": os.environ["OPENAI_API_KEY"]},
+    additional_headers={"X-OpenAI-Api-Key": 'os.environ["OPENAI_API_KEY"]'},
 )
 eg_store = Weaviate(client, "Rephrase", "content",
     attributes=["question", "answer", "chat_history"],)
